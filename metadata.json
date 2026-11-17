@@ -1,0 +1,6 @@
+{
+  "name": "GOQii HealthEngage — Clinic Practice Management",
+  "description": "GOQii HealthEngage Clinic Practice Management product marketing landing page.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
