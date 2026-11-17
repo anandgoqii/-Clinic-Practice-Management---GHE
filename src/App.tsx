@@ -98,42 +98,66 @@ export default function App() {
             </div>
           </div>
 
-          {/* Hero mock: patient thread */}
+          {/* Hero mock: patient thread mobile screen */}
           <div className="he-chat-card">
-            <div className="he-chat-header">
-              <div className="he-chat-identity">
-                <div className="he-chat-avatar">
-                  <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2BC48A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2a7 7 0 0 1 7 7v3a7 7 0 0 1-14 0V9a7 7 0 0 1 7-7z" />
-                    <path d="M8 21h8" />
+            <div className="he-phone-screen">
+              <div aria-hidden="true" className="he-phone-statusbar">
+                <span className="he-phone-time">2:14</span>
+                <span className="he-phone-notch" />
+                <div className="he-phone-signals">
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="#0F172A">
+                    <rect x="0" y="7" width="2.2" height="3" rx="0.6" />
+                    <rect x="3.8" y="5" width="2.2" height="5" rx="0.6" />
+                    <rect x="7.6" y="2.5" width="2.2" height="7.5" rx="0.6" />
+                    <rect x="11.4" y="0" width="2.2" height="10" rx="0.6" />
+                  </svg>
+                  <svg width="20" height="10" viewBox="0 0 20 10" fill="none">
+                    <rect x="0.75" y="0.75" width="16.5" height="8.5" rx="2.2" stroke="#0F172A" strokeWidth="1.3" />
+                    <rect x="2.4" y="2.4" width="12.2" height="5.2" rx="1" fill="#0F172A" />
+                    <path d="M18.5 3.5v3" stroke="#0F172A" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
                 </div>
-                <div className="he-brand-text">
-                  <span className="he-chat-name">GOQii Health Companion</span>
-                  <span className="he-chat-status">Online · replies in seconds</span>
+              </div>
+              <div className="he-chat-header">
+                <div className="he-chat-identity">
+                  <div className="he-chat-avatar">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2BC48A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2a7 7 0 0 1 7 7v3a7 7 0 0 1-14 0V9a7 7 0 0 1 7-7z" />
+                      <path d="M8 21h8" />
+                    </svg>
+                  </div>
+                  <div className="he-brand-text">
+                    <span className="he-chat-name">GOQii Health Companion</span>
+                    <span className="he-chat-status">Online · replies in seconds</span>
+                  </div>
+                </div>
+                <span className="he-chat-time">2:14 AM</span>
+              </div>
+              <div className="he-phone-body">
+                <div className="he-bubble-patient">My son has had a fever of 102°F since last night.</div>
+                <div className="he-bubble-ai">
+                  How old is he, and is there any cough, vomiting or rash? I can see his last three temperature readings from the GOQii app.
+                </div>
+                <div className="he-bubble-patient">Five. A little cough, not eating.</div>
+                <div className="he-bubble-ai">
+                  I&apos;ve prepared a summary for a paediatrician. A doctor will review and sign within minutes.
+                </div>
+                <div className="he-rx-card" style={{ border: `1.5px solid ${ACCENT}` }}>
+                  <div className="he-rx-top">
+                    <span className="he-rx-label">Doctor-signed prescription</span>
+                    <svg role="img" aria-label="Signed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </div>
+                  <span className="he-rx-doc">Dr. [DOCTOR NAME] · MBBS, MD · Reg. [NUMBER]</span>
+                  <span className="he-rx-meta">
+                    Paracetamol syrup 5 ml, every 6 h · Reviewed &amp; signed · Saved to vault · Reminders set
+                  </span>
                 </div>
               </div>
-              <span className="he-chat-time">2:14 AM</span>
-            </div>
-            <div className="he-bubble-patient">My son has had a fever of 102°F since last night.</div>
-            <div className="he-bubble-ai">
-              How old is he, and is there any cough, vomiting or rash? I can see his last three temperature readings from the GOQii app.
-            </div>
-            <div className="he-bubble-patient">Five. A little cough, not eating.</div>
-            <div className="he-bubble-ai">
-              I&apos;ve prepared a summary for a paediatrician. A doctor will review and sign within minutes.
-            </div>
-            <div className="he-rx-card" style={{ border: `1.5px solid ${ACCENT}` }}>
-              <div className="he-rx-top">
-                <span className="he-rx-label">Doctor-signed prescription</span>
-                <svg role="img" aria-label="Signed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 6L9 17l-5-5" />
-                </svg>
+              <div aria-hidden="true" className="he-phone-home">
+                <span className="he-phone-homebar" />
               </div>
-              <span className="he-rx-doc">Dr. [DOCTOR NAME] · MBBS, MD · Reg. [NUMBER]</span>
-              <span className="he-rx-meta">
-                Paracetamol syrup 5 ml, every 6 h · Reviewed &amp; signed · Saved to vault · Reminders set
-              </span>
             </div>
           </div>
         </div>
@@ -338,26 +362,69 @@ export default function App() {
               </div>
               <div className="he-feature-tiles">
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z" />
+                      <path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9z" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">AI case assistant</span>
                   <span className="he-feature-tile-desc">Summary, red flags and next questions in seconds, each with its evidence</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14 2 14 8 20 8" />
+                      <line x1="8" y1="13" x2="16" y2="13" />
+                      <line x1="8" y1="17" x2="13" y2="17" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Report and image ingestion</span>
                   <span className="he-feature-tile-desc">Lab PDFs and photos become typed values with reference ranges</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="8" y1="6" x2="21" y2="6" />
+                      <line x1="8" y1="12" x2="21" y2="12" />
+                      <line x1="8" y1="18" x2="21" y2="18" />
+                      <circle cx="4" cy="6" r="1" />
+                      <circle cx="4" cy="12" r="1" />
+                      <circle cx="4" cy="18" r="1" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Differentials with ICD-10</span>
                   <span className="he-feature-tile-desc">Ranked, with confidence and the investigations that separate them</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <path d="M9 12l2 2 4-4" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Safety checks before signing</span>
                   <span className="he-feature-tile-desc">Interactions, allergies, dose by age and weight, pregnancy, duplicates</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 20h9" />
+                      <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Auto-drafted SOAP note</span>
                   <span className="he-feature-tile-desc">From the thread or an ambient recording; the doctor edits and signs</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="8" y="2" width="8" height="4" rx="1" />
+                      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                      <path d="M9 14l2 2 4-4" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Review queue and signed Rx</span>
                   <span className="he-feature-tile-desc">Urgency-ordered queue; digital signature, registry number and pharmacy QR</span>
                 </div>
@@ -379,26 +446,70 @@ export default function App() {
               </div>
               <div className="he-feature-tiles">
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon he-feature-tile-icon-pat">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">24x7 Health Companion</span>
                   <span className="he-feature-tile-desc">Chat, voice note or call; replies in the language you use</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon he-feature-tile-icon-pat">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <polyline points="16 11 18 13 22 9" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Doctor hand-off in one tap</span>
                   <span className="he-feature-tile-desc">See the queue, get the signed Rx with the doctor&apos;s name on it</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon he-feature-tile-icon-pat">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="11" width="18" height="10" rx="2" />
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                      <circle cx="12" cy="16" r="1" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Health Vault</span>
                   <span className="he-feature-tile-desc">Consults, Rx, reports and vitals in one timeline; export or share, revoke any time</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon he-feature-tile-icon-pat">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+                      <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+                      <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+                      <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+                      <path d="M7 12h10" />
+                      <path d="M7 8h6" />
+                      <path d="M7 16h8" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Report reader</span>
                   <span className="he-feature-tile-desc">Photograph a lab report and get it explained, trended against last time</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon he-feature-tile-icon-pat">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Family profiles</span>
                   <span className="he-feature-tile-desc">Children and parents under one account, each with their own vault and consent</span>
                 </div>
                 <div className="he-feature-tile">
+                  <div className="he-feature-tile-icon he-feature-tile-icon-pat">
+                    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                      <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    </svg>
+                  </div>
                   <span className="he-feature-tile-title">Clinical reminders</span>
                   <span className="he-feature-tile-desc">Doses from the signed Rx, refills, tests and vaccines; a Reach call if ignored</span>
                 </div>
@@ -420,21 +531,44 @@ export default function App() {
           </div>
           <div className="he-why-grid">
             <div className="he-why-card">
+              <div className="he-why-icon">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
               <span className="he-why-label">DeviceDataHub</span>
               <span className="he-why-title">Vitals and wearables already in every case</span>
               <span className="he-why-desc">BP, glucose, SpO2, sleep and fall events from GOQii and third-party devices.</span>
             </div>
             <div className="he-why-card">
+              <div className="he-why-icon">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
               <span className="he-why-label">Reach</span>
               <span className="he-why-title">Voice in and out, on phone and WhatsApp</span>
               <span className="he-why-desc">Doctor callbacks, refill calls and escalated reminders run on the agent you already have.</span>
             </div>
             <div className="he-why-card">
+              <div className="he-why-icon">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </div>
               <span className="he-why-label">Residency</span>
               <span className="he-why-title">Data stays in the patient&apos;s country</span>
               <span className="he-why-desc">Separate regional instances for India, Saudi Arabia, UAE, UK and US — inference included.</span>
             </div>
             <div className="he-why-card">
+              <div className="he-why-icon">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8558" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
               <span className="he-why-label">HE-APIC</span>
               <span className="he-why-title">API-first for insurers and ISVs</span>
               <span className="he-why-desc">Every CPM service is a tenant-scoped API with webhooks, so partners embed the loop in their own app.</span>
