@@ -500,45 +500,12 @@ export default function App() {
               />
               <p className="he-footer-tagline">Clinic Practice Management — AI navigates. Your doctor decides.</p>
             </div>
-
-            <div className="he-footer-col">
-              <span className="he-footer-heading">Platform</span>
-              <div className="he-footer-links">
-                <a href="#problem">The problem</a>
-                <a href="#gap">The gap</a>
-                <a href="#loop">The loop</a>
-                <a href="#features">Features</a>
-                <a href="#why">Why HealthEngage</a>
-              </div>
-            </div>
-
-            <div className="he-footer-col">
-              <span className="he-footer-heading">Capabilities</span>
-              <div className="he-footer-links">
-                <a href="#features">For doctors</a>
-                <a href="#features">For patients</a>
-                <a href="#why">DeviceDataHub</a>
-                <a href="#why">Reach</a>
-                <a href="#why">HE-APIC</a>
-              </div>
-            </div>
-
-            <div className="he-footer-col">
-              <span className="he-footer-heading">Trust &amp; Residency</span>
-              <div className="he-footer-links">
-                <span className="he-footer-text-item">Doctor-signed Rx</span>
-                <span className="he-footer-text-item">Consent before any AI</span>
-                <span className="he-footer-text-item">Encrypted, in-region hosting</span>
-                <span className="he-footer-text-item">India · Saudi Arabia · UAE · UK · US</span>
-              </div>
-            </div>
+            <p className="he-footer-copy">© 2026 GOQii HealthEngage. All rights reserved.</p>
           </div>
-
           <div className="he-footer-bottom">
             <p className="he-disclaimer">
               HealthEngage CPM assists clinicians; it does not diagnose or prescribe. Every prescription is reviewed and signed by a physician registered in the patient&apos;s jurisdiction. Feature availability varies by region and tenant configuration.
             </p>
-            <p className="he-footer-copy">© 2026 GOQii HealthEngage. Clinic Practice Management.</p>
           </div>
         </div>
       </footer>
